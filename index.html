@@ -1,44 +1,128 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>ReachOut</title>
 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
 <body>
-    <img class="image-gradient" src="gradient.png" alt="gradient">
+
+    <!-- Background Effects -->
+    <img class="image-gradient" src="gradient.png" alt="Background Gradient">
     <div class="layer-blur"></div>
 
     <div class="container">
+
+        <!-- HEADER -->
         <header>
-            <h1 class="logo">ReachOut</h1>
+            <h1 data-aos="zoom-out-right" data-aos-duration="1500" class="logo">
+                ReachOut
+            </h1>
 
             <nav>
-                <a href="#">COMPANY</a>
-                <a href="#">COMPANY</a>
-                <a href="#">COMPANY</a>
-                <a href="#">COMPANY</a>
+                <a data-aos="zoom-out-right" data-aos-duration="1500" href="#about">ABOUT</a>
+                <a data-aos="zoom-out-right" data-aos-duration="2000" href="#projects">PROJECTS</a>
+                <a data-aos="zoom-out-right" data-aos-duration="2500" href="#skills">SKILLS</a>
+                <a data-aos="zoom-out-right" data-aos-duration="3000" href="#contact">CONTACT</a>
             </nav>
-            <button class="btn-signing">SIGNING</button>
+
+            <a data-aos="zoom-out-right" data-aos-duration="1500"
+               href="#contact" class="btn-signing">
+               CONTACT
+            </a>
         </header>
-        <div class="content">
-            <div class="tag-box">
-                <div class="tag">INTRO</div>
-            </div>
-            <h1>EMAIL FOR <br> DEVELOPERS</h1>
-            <p class="description">
-                The best way to reach me !
-            </p>
-            <div class="buttons">
-                <a href="#" class="btn-get-started">DOCUMENTATION &gt;</a>
-                <a href="#" class="btn-signing-main">GET STARTED &gt;</a>
+
+        <!-- ================= HOME SECTION ================= -->
+        <main id="home">
+            <div class="content">
+
+                <div class="tag-box" data-aos="fade-zoom-in" data-aos-duration="1500">
+                    <div class="tag">PORTFOLIO</div>
+                </div>
+
+                <h1 data-aos="fade-zoom-in" data-aos-duration="1800">
+                    EMAIL FOR <br> DEVELOPERS
+                </h1>
+
+                <p class="description" data-aos="fade-zoom-in" data-aos-duration="2100">
+                    The best way to reach me! Clean, simple, and developer friendly communication.
+                </p>
+
+                <div class="buttons">
+                    <a href="#" class="btn-get-started">DOCUMENTATION &gt;</a>
+                    <a href="#" class="btn-signing-main">GET STARTED &gt;</a>
+                </div>
 
             </div>
-        </div>
+        </main>
+        <!-- ================= END HOME ================= -->
+
+
+        <!-- ================= ABOUT SECTION ================= -->
+        <section id="about" class="about-section">
+
+            <div class="about-content">
+
+                <div class="about-tag-box">
+                    <div class="about-tag">ABOUT</div>
+                </div>
+
+                <h2>
+                    Building Experiences,<br>
+                    Not Just Websites
+                </h2>
+
+                <p class="about-description">
+                    I’m a developer who enjoys creating clean, modern, and user-focused
+                    interfaces. I like working on real-world projects, learning new
+                    technologies, and improving how people interact with the web.
+                    My focus is on writing simple, readable code while delivering
+                    visually engaging experiences.
+                </p>
+
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <h3>Frontend</h3>
+                        <p>HTML • CSS • JavaScript</p>
+                    </div>
+
+                    <div class="highlight">
+                        <h3>Projects</h3>
+                        <p>Hands-on & Practical</p>
+                    </div>
+
+                    <div class="highlight">
+                        <h3>Learning</h3>
+                        <p>AI • ML • Web</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- ================= END ABOUT ================= -->
+
+
+        <!-- ROBOT (ABSOLUTE – DOES NOT AFFECT FLOW) -->
+        <spline-viewer
+            class="robot-3d"
+            url="https://prod.spline.design/Z4M6ihBrRt0G7Knm/scene.splinecode">
+        </spline-viewer>
+
     </div>
-</body>
 
-</html> -->
+    <!-- Scripts -->
+    <script type="module"
+        src="https://unpkg.com/@splinetool/viewer@1.12.28/build/spline-viewer.js">
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
