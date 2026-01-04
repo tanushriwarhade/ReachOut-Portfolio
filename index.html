@@ -3,126 +3,509 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReachOut</title>
-
+    <title> Tanushri- Web Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-    <!-- Background Effects -->
-    <img class="image-gradient" src="gradient.png" alt="Background Gradient">
-    <div class="layer-blur"></div>
-
-    <div class="container">
-
-        <!-- HEADER -->
-        <header>
-            <h1 data-aos="zoom-out-right" data-aos-duration="1500" class="logo">
-                ReachOut
-            </h1>
-
-            <nav>
-                <a data-aos="zoom-out-right" data-aos-duration="1500" href="#about">ABOUT</a>
-                <a data-aos="zoom-out-right" data-aos-duration="2000" href="#projects">PROJECTS</a>
-                <a data-aos="zoom-out-right" data-aos-duration="2500" href="#skills">SKILLS</a>
-                <a data-aos="zoom-out-right" data-aos-duration="3000" href="#contact">CONTACT</a>
-            </nav>
-
-            <a data-aos="zoom-out-right" data-aos-duration="1500"
-               href="#contact" class="btn-signing">
-               CONTACT
-            </a>
-        </header>
-
-        <!-- ================= HOME SECTION ================= -->
-        <main id="home">
-            <div class="content">
-
-                <div class="tag-box" data-aos="fade-zoom-in" data-aos-duration="1500">
-                    <div class="tag">PORTFOLIO</div>
-                </div>
-
-                <h1 data-aos="fade-zoom-in" data-aos-duration="1800">
-                    EMAIL FOR <br> DEVELOPERS
-                </h1>
-
-                <p class="description" data-aos="fade-zoom-in" data-aos-duration="2100">
-                    The best way to reach me! Clean, simple, and developer friendly communication.
-                </p>
-
-                <div class="buttons">
-                    <a href="#" class="btn-get-started">DOCUMENTATION &gt;</a>
-                    <a href="#" class="btn-signing-main">GET STARTED &gt;</a>
-                </div>
-
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">ReachOut</span>
+                <span class="logo-bracket">/&gt;</span>
             </div>
-        </main>
-        <!-- ================= END HOME ================= -->
+            <ul class="nav-links">
+                <li><a href="#home" data-text="HOME">HOME</a></li>
+                <li><a href="#about" data-text="ABOUT">ABOUT</a></li>
+                <li><a href="#projects" data-text="PROJECTS">PROJECTS</a></li>
+                <li><a href="#skills" data-text="SKILLS">SKILLS</a></li>
+                <li><a href="#contact" data-text="CONTACT">CONTACT</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-
-        <!-- ================= ABOUT SECTION ================= -->
-        <section id="about" class="about-section">
-
-            <div class="about-content">
-
-                <div class="about-tag-box">
-                    <div class="about-tag">ABOUT</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="glitch-wrapper">
+                <h1 class="hero-title glitch" data-text="TANUSHRI WARHADE">TANUSHRI WARHADE</h1>
+            </div>
+            <div class="hero-subtitle">
+                <span class="typing-text"></span>
+                <span class="cursor-blink">|</span>
+            </div>
+            <p class="hero-description">
+                <span class="anime-line">Crafting pixel-perfect experiences</span>
+                <span class="anime-line">with code and creativity</span>
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">
+                    <span>VIEW PROJECTS</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    <span>CONTACT ME</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Animated Character/Avatar -->
+        <div class="hero-avatar">
+            <div class="avatar-circle">
+                <div class="avatar-rings">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
                 </div>
+                <div class="avatar-image">
+                    <div class="avatar-placeholder">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="80" r="35" fill="#00f0ff"/>
+                            <circle cx="85" cy="75" r="5" fill="#0a0a1f"/>
+                            <circle cx="115" cy="75" r="5" fill="#0a0a1f"/>
+                            <path d="M 85 90 Q 100 100 115 90" stroke="#0a0a1f" stroke-width="3" fill="none"/>
+                            <rect x="70" y="120" width="60" height="50" rx="5" fill="#00f0ff"/>
+                            <rect x="60" y="130" width="20" height="50" fill="#00f0ff"/>
+                            <rect x="120" y="130" width="20" height="50" fill="#00f0ff"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-icons">
+                <div class="icon-orbit" style="--delay: 0s">⚡</div>
+                <div class="icon-orbit" style="--delay: 0.5s">🎨</div>
+                <div class="icon-orbit" style="--delay: 1s">💻</div>
+                <div class="icon-orbit" style="--delay: 1.5s">🚀</div>
+            </div>
+        </div>
+    </section>
 
-                <h2>
-                    Building Experiences,<br>
-                    Not Just Websites
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">01.</span>
+                    <span class="title-text">ABOUT ME</span>
                 </h2>
-
-                <p class="about-description">
-                    I’m a developer who enjoys creating clean, modern, and user-focused
-                    interfaces. I like working on real-world projects, learning new
-                    technologies, and improving how people interact with the web.
-                    My focus is on writing simple, readable code while delivering
-                    visually engaging experiences.
-                </p>
-
-                <div class="about-highlights">
-                    <div class="highlight">
-                        <h3>Frontend</h3>
-                        <p>HTML • CSS • JavaScript</p>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="text-block reveal">
+                        <h3>Hello World! </h3>
+                        <p>
+                            I'm a <span class="highlight">passionate web developer</span> who transforms 
+                            ideas into stunning digital realities. With a blend of technical expertise 
+                            and creative vision, I craft experiences that users love.
+                        </p>
                     </div>
-
-                    <div class="highlight">
-                        <h3>Projects</h3>
-                        <p>Hands-on & Practical</p>
+                    <div class="text-block reveal">
+                        <h3>My Journey </h3>
+                        <p>
+                            From writing my first "Hello World" to building complex applications, 
+                            my journey has been fueled by curiosity and a love for problem-solving. 
+                            I believe that <span class="highlight">great code is like poetry</span> – 
+                            elegant, efficient, and impactful.
+                        </p>
                     </div>
+                    <div class="text-block reveal">
+                        <h3>Philosophy </h3>
+                        <p>
+                            I don't just write code; I craft experiences. Every project is an opportunity 
+                            to push boundaries, learn something new, and create something that makes 
+                            a difference.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card reveal">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-number" data-target="20">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-icon">☕</div>
+                        <div class="stat-number" data-target="1000">0</div>
+                        <div class="stat-label">Cups of TEA</div>
+                    </div>
+                    <!-- <div class="stat-card reveal">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">Happy Clients</div> -->
+                    <!-- </div> -->
+                    <div class="stat-card reveal">
+                        <div class="stat-icon">🎓</div>
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="highlight">
-                        <h3>Learning</h3>
-                        <p>AI • ML • Web</p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">02.</span>
+                    <span class="title-text">FEATURED PROJECTS</span>
+                </h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h3>E-Commerce Platform</h3>
+                                <p>Full-stack marketplace with real-time features</p>
+                            </div>
+                        </div>
+                        <div class="image-placeholder">
+                            <div class="placeholder-icon">🛒</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A comprehensive online marketplace featuring secure payments, 
+                            real-time inventory management, and advanced search functionality.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <span>View Live</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="2"/>
+                                    <polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="project-link">
+                                <span>GitHub</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Project 2 -->
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h3>AI Chat Application</h3>
+                                <p>Real-time messaging with AI assistance</p>
+                            </div>
+                        </div>
+                        <div class="image-placeholder">
+                            <div class="placeholder-icon">🤖</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">AI/ML</span>
+                        </div>
+                        <h3 class="project-title">AI Chat Application</h3>
+                        <p class="project-description">
+                            Modern chat platform with AI-powered responses, real-time messaging, 
+                            and smart conversation threading.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <span>View Live</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="2"/>
+                                    <polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="project-link">
+                                <span>GitHub</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h3>Portfolio Generator</h3>
+                                <p>Dynamic portfolio creation tool</p>
+                            </div>
+                        </div>
+                        <div class="image-placeholder">
+                            <div class="placeholder-icon">🎨</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                        <h3 class="project-title">Portfolio Generator</h3>
+                        <p class="project-description">
+                            Automated portfolio builder with customizable templates, 
+                            drag-and-drop interface, and instant deployment.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <span>View Live</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="2"/>
+                                    <polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="project-link">
+                                <span>GitHub</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">03.</span>
+                    <span class="title-text">TECH STACK</span>
+                </h2>
+                <div class="title-line"></div>
             </div>
 
-        </section>
-        <!-- ================= END ABOUT ================= -->
+            <div class="skills-container">
+                <div class="skill-category reveal">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">HTML/CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                            <div class="skill-percent">95%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                            <div class="skill-percent">90%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">React</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                            <div class="skill-percent">88%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Vue.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                            <div class="skill-percent">85%</div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="skill-category reveal">
+                    <h3 class="category-title">Backend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">Node.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="87"></div>
+                            </div>
+                            <div class="skill-percent">87%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Python</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                            <div class="skill-percent">82%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">MongoDB</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                            <div class="skill-percent">80%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">PostgreSQL</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="78"></div>
+                            </div>
+                            <div class="skill-percent">78%</div>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- ROBOT (ABSOLUTE – DOES NOT AFFECT FLOW) -->
-        <spline-viewer
-            class="robot-3d"
-            url="https://prod.spline.design/Z4M6ihBrRt0G7Knm/scene.splinecode">
-        </spline-viewer>
+                <div class="skill-category reveal">
+                    <h3 class="category-title">Tools & Design</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">Git/GitHub</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                            <div class="skill-percent">92%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Latex</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                            <div class="skill-percent">90%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">GenerativeAI</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                            <div class="skill-percent">80%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">VSCode, Anaconda</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                            <div class="skill-percent">95%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">04.</span>
+                    <span class="title-text">GET IN TOUCH</span>
+                </h2>
+                <div class="title-line"></div>
+            </div>
 
-    <!-- Scripts -->
-    <script type="module"
-        src="https://unpkg.com/@splinetool/viewer@1.12.28/build/spline-viewer.js">
-    </script>
+            <div class="contact-content">
+                <div class="contact-info reveal">
+                    <h3>Let's Build Something Amazing Together!</h3>
+                    <p>
+                        Whether you have a project in mind, need help with development, 
+                        or just want to connect, I'd love to hear from you.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <a href="tanuwarhade@gmail.com" class="contact-method">
+                            <div class="method-icon">📧</div>
+                            <div class="method-details">
+                                <div class="method-label">Email</div>
+                                <div class="method-value">tanuwarhade@gmail.com</div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/tanushriwarhade" class="contact-method" target="_blank">
+                            <div class="method-icon">💻</div>
+                            <div class="method-details">
+                                <div class="method-label">GitHub</div>
+                                <div class="method-value">https://github.com/tanushriwarhade</div>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tanushri-warhade/" class="contact-method" target="_blank">
+                            <div class="method-icon">💼</div>
+                            <div class="method-details">
+                                <div class="method-label">LinkedIn</div>
+                                <div class="method-value">https://www.linkedin.com/in/tanushri-warhade/</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+                <form class="contact-form reveal">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>SEND MESSAGE</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Designed & Built by <span class="highlight">Your Name</span></p>
+            <p class="footer-year">© 2026 All Rights Reserved</p>
+        </div>
+        <div class="footer-animation">
+            <div class="code-rain">
+                <span>01</span><span>00</span><span>11</span><span>10</span><span>01</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
